@@ -4,5 +4,3 @@ export enum COMMANDS {
   SERVER = 'lame-server',
   KANYE = 'kanye',
 }
-
-const testHusky = '';
