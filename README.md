@@ -12,10 +12,17 @@ $ cd discord-lame-bot
 $ yarn
 ```
 
+# How to run it locally
+
+- Start reading from here
+  - [Setting up a bot application](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
+- Invite the bot into your server
+- `yarn dev:watch`
+
 # Code style
 
 This repo uses [husky](https://github.com/typicode/husky), [eslint](https://eslint.org/) and [prettier](https://prettier.io/) to format the code when you commit.
 
 # Tokens and Secrets
 
-Rename the `.env.example` to example.
+Rename the `.env.example` to `.env`
