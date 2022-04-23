@@ -4,7 +4,7 @@ import { SlashCommandBuilder } from '@discordjs/builders'
 import { REST } from '@discordjs/rest'
 import { Routes } from 'discord-api-types/v9'
 import { COMMANDS } from './commands'
-import { switchMap } from './switchMapComamd'
+import { switchMap } from './switchMap'
 
 config()
 
