@@ -27,6 +27,15 @@ const commands = [
   new SlashCommandBuilder()
     .setName(COMMANDS.TRUMP)
     .setDescription('Replies with a lame trump quote'),
+  new SlashCommandBuilder()
+    .setName(COMMANDS.ASSHOLE)
+    .setDescription('Replies with a gift link')
+    .addStringOption((option) =>
+      option
+        .setName('name')
+        .setDescription('The person name to gift the asshole gift')
+        .setRequired(true)
+    ),
 ].map((command) => command.toJSON())
 
 const rest = new REST({ version: '9' }).setToken(BOT_TOKEN as string)
@@ -38,7 +47,7 @@ rest
   .then(() => console.log('Successfully registered application commands.'))
   .catch(console.error)
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] })
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] })
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
@@ -54,7 +63,10 @@ client.on('interactionCreate', async (interaction) => {
   try {
     return await switchMap(interaction)[commandName]()
   } catch (error) {
-    return interaction.reply('Something went wrong in the REST APIs we use (ノಠ益ಠ)ノ彡┻━┻')
+    console.log(error)
+    return interaction.reply(
+      'A lame generic BS error message to tell you that something went wrong (ノಠ益ಠ)ノ彡┻━┻, and we really do not care'
+    )
   }
 })
 

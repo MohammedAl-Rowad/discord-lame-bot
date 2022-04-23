@@ -1,8 +1,9 @@
 // type Commands = keyof typeof COMMANDS
 
-import { CacheType, CommandInteraction } from 'discord.js'
+import { CacheType, CommandInteraction, User } from 'discord.js'
 import axios from 'axios'
 import { COMMANDS } from './commands'
+import { convertIdToMention, getUserFromMention } from './helpers'
 
 type SwitchMap = (interaction: CommandInteraction<CacheType>) => {
   [s: string]: () => Promise<void | any>
@@ -38,5 +39,16 @@ export const switchMap: SwitchMap = (interaction: CommandInteraction<CacheType>)
   [COMMANDS.TRUMP]: async () => {
     const data = await axios.get('https://api.tronalddump.io/random/quote').then(({ data }) => data)
     return interaction.reply(data.value)
+  },
+  [COMMANDS.ASSHOLE]: async () => {
+    const name = interaction.options.get('name')?.value
+
+    const author = interaction.member?.user
+
+    return interaction.reply(
+      `Hey ${name} see this link from ${convertIdToMention(
+        author?.id as string
+      )} 💖 https://foaas.com/asshole/${author?.username}`
+    )
   },
 })

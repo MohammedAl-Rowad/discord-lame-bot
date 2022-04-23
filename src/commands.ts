@@ -7,5 +7,5 @@ export enum COMMANDS {
   DAD_JOKE = 'lame-dad-joke',
   GEEK_JOKE = 'lame-geek-joke',
   TRUMP = 'trump',
-  FOAAS = 'foaas',
+  ASSHOLE = 'asshole-gift',
 }
