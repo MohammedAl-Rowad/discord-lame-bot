@@ -2,16 +2,14 @@
 
 This bot 🤖 just sends some lame jokes and roasts anyone in the server.
 
-
 # How to install locally
 
 > you need node 14+
 
-
 ```bash
-> git@github.com:MohammedAl-Rowad/discord-lame-bot.git
-> cd discord-lame-bot
-> yarn
+$ git@github.com:MohammedAl-Rowad/discord-lame-bot.git
+$ cd discord-lame-bot
+$ yarn
 ```
 
 # Code style
