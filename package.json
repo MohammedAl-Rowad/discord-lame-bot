@@ -33,7 +33,7 @@
     "husky": "^7.0.4"
   },
   "lint-staged": {
-    "*.{ts}": [
+    "*.ts": [
       "prettier --write",
       "eslint --fix"
     ]
