@@ -8,4 +8,6 @@ export enum COMMANDS {
   GEEK_JOKE = 'lame-geek-joke',
   TRUMP = 'trump',
   ASSHOLE = 'asshole-gift',
+  WHY_ASSHOLE = 'asshole-why',
+  THANKS = 'thanks',
 }

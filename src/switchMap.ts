@@ -44,11 +44,30 @@ export const switchMap: SwitchMap = (interaction: CommandInteraction<CacheType>)
     const name = interaction.options.get('name')?.value
 
     const author = interaction.member?.user
+    const authorMention = convertIdToMention(author?.id as string)
 
     return interaction.reply(
-      `Hey ${name} see this link from ${convertIdToMention(
-        author?.id as string
-      )} 💖 https://foaas.com/asshole/${author?.username}`
+      `Hey ${name} see this link from ${authorMention} 💖 https://foaas.com/asshole/${author?.username}`
+    )
+  },
+  [COMMANDS.WHY_ASSHOLE]: async () => {
+    const name = interaction.options.get('name')?.value
+
+    const author = interaction.member?.user
+    const authorMention = convertIdToMention(author?.id as string)
+
+    return interaction.reply(
+      `Hey ${name} ${authorMention} wants to answer your very important question checkout this link => https://foaas.com/because/${author?.username}`
+    )
+  },
+  [COMMANDS.THANKS]: async () => {
+    const name = interaction.options.get('name')?.value
+
+    const author = interaction.member?.user
+    const authorMention = convertIdToMention(author?.id as string)
+
+    return interaction.reply(
+      `Hey ${name}, ${authorMention} wants to thank you 😌!, please see this link => https://foaas.com/thanks/${author?.username}`
     )
   },
 })

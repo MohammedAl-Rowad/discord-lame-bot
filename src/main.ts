@@ -36,6 +36,18 @@ const commands = [
         .setDescription('The person name to gift the asshole gift')
         .setRequired(true)
     ),
+  new SlashCommandBuilder()
+    .setName(COMMANDS.WHY_ASSHOLE)
+    .setDescription('Replies with a "why" link')
+    .addStringOption((option) =>
+      option.setName('name').setDescription('The person name that asked why?').setRequired(true)
+    ),
+  new SlashCommandBuilder()
+    .setName(COMMANDS.THANKS)
+    .setDescription('Replies with a thank you link')
+    .addStringOption((option) =>
+      option.setName('name').setDescription('The person name you want to thank').setRequired(true)
+    ),
 ].map((command) => command.toJSON())
 
 const rest = new REST({ version: '9' }).setToken(BOT_TOKEN as string)

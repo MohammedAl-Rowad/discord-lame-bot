@@ -8,7 +8,8 @@
   "scripts": {
     "compile": "tsc",
     "dev": "ts-node src/main.ts",
-    "dev:watch": "nodemon src/main.ts"
+    "dev:watch": "nodemon src/main.ts",
+    "postinstall": "yarn husky install"
   },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
