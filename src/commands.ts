@@ -11,6 +11,6 @@ export enum COMMANDS {
   WHY_ASSHOLE = 'asshole-why',
   THANKS = 'thanks',
   RANDOM_BS = 'lame-random-bs',
-  FIGLET = 'lame-random-figlet',
+  TEXT_FACE = 'lame-random-text-face',
   FACT = 'lame-fact',
 }

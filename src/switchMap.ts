@@ -76,7 +76,7 @@ export const switchMap: SwitchMap = (interaction: CommandInteraction<CacheType>)
 
     return interaction.reply(`Hey checkout this ${item}`)
   },
-  [COMMANDS.FIGLET]: async () => {
+  [COMMANDS.TEXT_FACE]: async () => {
     const randomfiglets = [
       `╭∩╮( ͡⚆ ͜ʖ ͡⚆)╭∩╮`,
       `╭∩╮（︶_︶）╭∩╮`,

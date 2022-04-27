@@ -19,8 +19,8 @@ const commands = [
     .setName(COMMANDS.RANDOM_BS)
     .setDescription('Replies with a random BS 💩 link'),
   new SlashCommandBuilder()
-    .setName(COMMANDS.FIGLET)
-    .setDescription('Replies with a random lame figlet'),
+    .setName(COMMANDS.TEXT_FACE)
+    .setDescription('Replies with a random lame text face'),
   new SlashCommandBuilder()
     .setName(COMMANDS.FACT)
     .setDescription('Replies with a random lame fact'),
