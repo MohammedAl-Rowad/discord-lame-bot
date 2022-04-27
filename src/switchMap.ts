@@ -70,4 +70,38 @@ export const switchMap: SwitchMap = (interaction: CommandInteraction<CacheType>)
       `Hey ${name}, ${authorMention} wants to thank you 😌!, please see this link => https://foaas.com/thanks/${author?.username}`
     )
   },
+  [COMMANDS.RANDOM_BS]: async () => {
+    const randomBsLinks = ['http://www.gtfoparrot.com/']
+    const item = randomBsLinks[Math.floor(Math.random() * randomBsLinks.length)]
+
+    return interaction.reply(`Hey checkout this ${item}`)
+  },
+  [COMMANDS.FIGLET]: async () => {
+    const randomfiglets = [
+      `╭∩╮( ͡⚆ ͜ʖ ͡⚆)╭∩╮`,
+      `╭∩╮（︶_︶）╭∩╮`,
+      `╭∩╮(꘠◞ ꘠)╭∩╮`,
+      `(◉ ³◉)╭∩╮`,
+      `╭∩╮(・Ѡ・)╭∩╮`,
+      `(👁️Д👁️)╭∩╮`,
+      `(ತ:ತ)╭∩╮`,
+    ]
+    const item = randomfiglets[Math.floor(Math.random() * randomfiglets.length)]
+
+    return interaction.reply(`${item}`)
+  },
+  [COMMANDS.FACT]: async () => {
+    const randomEndpoints = [
+      'https://some-random-api.ml/facts/dog',
+      'https://some-random-api.ml/facts/cat',
+      'https://some-random-api.ml/facts/panda',
+      'https://some-random-api.ml/facts/fox',
+      'https://some-random-api.ml/facts/bird',
+      'https://some-random-api.ml/facts/koala',
+    ]
+    const endpoint = randomEndpoints[Math.floor(Math.random() * randomEndpoints.length)]
+    const data = await axios.get(endpoint).then(({ data }) => data)
+
+    return interaction.reply(data.fact)
+  },
 })

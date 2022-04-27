@@ -16,6 +16,15 @@ const commands = [
   new SlashCommandBuilder().setName(COMMANDS.USER).setDescription('Replies with user info!'),
   new SlashCommandBuilder().setName(COMMANDS.KANYE).setDescription('Replies with a kanye quote'),
   new SlashCommandBuilder()
+    .setName(COMMANDS.RANDOM_BS)
+    .setDescription('Replies with a random BS 💩 link'),
+  new SlashCommandBuilder()
+    .setName(COMMANDS.FIGLET)
+    .setDescription('Replies with a random lame figlet'),
+  new SlashCommandBuilder()
+    .setName(COMMANDS.FACT)
+    .setDescription('Replies with a random lame fact'),
+  new SlashCommandBuilder()
     .setName(COMMANDS.ACTIVITY)
     .setDescription('Replies with a lame activity to do'),
   new SlashCommandBuilder()

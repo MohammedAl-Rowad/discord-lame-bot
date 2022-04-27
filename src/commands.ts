@@ -10,4 +10,7 @@ export enum COMMANDS {
   ASSHOLE = 'asshole-gift',
   WHY_ASSHOLE = 'asshole-why',
   THANKS = 'thanks',
+  RANDOM_BS = 'lame-random-bs',
+  FIGLET = 'lame-random-figlet',
+  FACT = 'lame-fact',
 }
