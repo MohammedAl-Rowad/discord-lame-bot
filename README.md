@@ -26,3 +26,7 @@ This repo uses [husky](https://github.com/typicode/husky), [eslint](https://esli
 # Tokens and Secrets
 
 Rename the `.env.example` to `.env`
+
+# Screenshots
+
+<img src="screenshot.png" width="100%" height="100%" />
